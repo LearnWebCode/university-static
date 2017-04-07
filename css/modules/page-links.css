@@ -1,0 +1,57 @@
+.page-links {
+  position: relative;
+  z-index: 1;
+  background-color: $beige;
+  margin: 0 0 40px 0;
+  @mixin atSmallMedium {
+    margin: 0 0 40px 20px;
+    width: 300px;
+    float: right;
+  }
+
+  &__title {
+    margin: 0;
+    font-weight: normal;
+    text-align: center;
+    padding: 20px 0;
+    background-color: $mainBlue;
+    color: #FFF;
+
+      a {
+        color: #FFF;
+        text-decoration: none;
+        background-color: $mainBlue;
+      }
+
+  }
+
+  li {
+    border-top: 1px solid color($beige l(-14%));
+  }
+
+  li:first-child {
+    border-top: none;
+  }
+
+  &__active {
+    padding: 17px 10px;
+    text-align: center;
+    background-color: color($beige blackness(+11%) s(+50%));
+    color: $mainBlue;
+    font-weight: bold;
+  }
+
+  li a {
+    display: block;
+    text-align: center;
+    padding: 17px 10px;
+    text-decoration: none;
+    color: $mainBlue;
+    transition: all .3s;
+  }
+
+  li a:hover {
+    color: color($mainBlue b(+6%));
+    background-color: color($beige blackness(+18%) s(+65%));
+  }
+}

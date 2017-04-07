@@ -1,0 +1,32 @@
+.professor-cards {
+  margin: 0;
+  padding: 0;
+}
+
+.professor-card {
+  position: relative;
+  display: inline-block;
+  width: 200px;
+  margin-right: 15px;
+
+  &__image {
+    display: block;
+  }
+
+  &__name {
+    font-weight: 300;
+    font-size: .9rem;
+    position: absolute;
+    bottom: 0;
+    color: #FFF;
+    left: 0;
+    right: 0;
+    padding: 3px 10px;
+    background-color: color($darkOrange a(85%) b(+15%) s(+20%));
+  }
+
+  &__list-item {
+    display: inline-block;
+    list-style: none;
+  }
+}

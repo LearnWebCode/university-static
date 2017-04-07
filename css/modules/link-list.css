@@ -1,0 +1,15 @@
+.link-list {
+  li {
+    padding: 1rem 0;
+    font-size: 1.5rem;
+    border-bottom: 1px dotted #DEDEDE;
+  }
+
+  li:last-child {
+    border-bottom: none;
+  }
+
+  a {
+    color: $darkOrange;
+  }
+}
