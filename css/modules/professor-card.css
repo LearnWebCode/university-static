@@ -8,9 +8,17 @@
   display: inline-block;
   width: 200px;
   margin-right: 15px;
+  background-color: $darkOrange;
+  overflow: hidden;
 
   &__image {
     display: block;
+    transition: opacity .3s ease-out, transform .3s ease-out;
+  }
+
+  &:hover &__image {
+    opacity: .80;
+    transform: scale(1.1) rotate(4deg);
   }
 
   &__name {
@@ -23,6 +31,10 @@
     right: 0;
     padding: 3px 10px;
     background-color: color($darkOrange a(85%) b(+15%) s(+20%));
+  }
+
+  &:hover &__name {
+    background-color: color($darkOrange a(85%) b(+25%) s(+20%));
   }
 
   &__list-item {

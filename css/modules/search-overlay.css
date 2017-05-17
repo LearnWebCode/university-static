@@ -21,7 +21,7 @@
   &__icon {
     margin-right: 10px;
     font-size: 1.8rem;
-    color: $mainBlue;
+    color: $darkOrange;
     @mixin atMedium {
       font-size: 2.5rem;
     }
@@ -49,7 +49,7 @@
     font-size: 2.1rem;
     cursor: pointer;
     transition: all .3s;
-    color: $mainBlue;
+    color: $darkOrange;
     background-color: #FFF;
     line-height: .7;
     @mixin atSmall {
@@ -81,7 +81,7 @@
   font-size: 1rem;
   font-weight: 300;
   outline: none;
-  color: $mainBlue;
+  color: $darkOrange;
   @mixin atSmall {
     font-size: 1.5rem
   }
