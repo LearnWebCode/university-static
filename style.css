@@ -1,3 +1,9 @@
+/*
+Theme Name: Fictional University
+Author: Brad
+Version: 1.0
+*/
+
 /* 3rd party packages */
 
 /*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
@@ -1494,7 +1500,7 @@ body.login {
 .search-overlay__icon {
   margin-right: 10px;
   font-size: 1.8rem;
-  color: #0D3B66;
+  color: #F95738;
 }
 
 @media (min-width: 960px) {
@@ -1528,7 +1534,7 @@ body.login {
   cursor: pointer;
   -webkit-transition: all .3s;
   transition: all .3s;
-  color: #0D3B66;
+  color: #F95738;
   background-color: #FFF;
   line-height: .7;
 }
@@ -1567,7 +1573,7 @@ body.login {
   font-size: 1rem;
   font-weight: 300;
   outline: none;
-  color: #0D3B66;
+  color: #F95738;
 }
 
 @media (min-width: 530px) {
@@ -1599,10 +1605,22 @@ body.login {
   display: inline-block;
   width: 200px;
   margin-right: 15px;
+  background-color: #F95738;
+  overflow: hidden;
 }
 
 .professor-card__image {
   display: block;
+  -webkit-transition: opacity .3s ease-out, -webkit-transform .3s ease-out;
+  transition: opacity .3s ease-out, -webkit-transform .3s ease-out;
+  transition: opacity .3s ease-out, transform .3s ease-out;
+  transition: opacity .3s ease-out, transform .3s ease-out, -webkit-transform .3s ease-out;
+}
+
+.professor-card:hover .professor-card__image {
+  opacity: .80;
+  -webkit-transform: scale(1.1) rotate(4deg);
+          transform: scale(1.1) rotate(4deg);
 }
 
 .professor-card__name {
@@ -1615,6 +1633,10 @@ body.login {
   right: 0;
   padding: 3px 10px;
   background-color: rgba(236, 68, 34, 0.85);
+}
+
+.professor-card:hover .professor-card__name {
+  background-color: rgba(213, 62, 32, 0.85);
 }
 
 .professor-card__list-item {

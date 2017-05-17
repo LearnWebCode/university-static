@@ -1,3 +1,9 @@
+/*
+Theme Name: Fictional University
+Author: Brad
+Version: 1.0
+*/
+
 /* 3rd party packages */
 @import "normalize.css";
 @import "slick-carousel/slick/slick.css";
@@ -26,4 +32,3 @@
 @import "modules/link-list";
 @import "modules/metabox";
 @import "modules/post-item";
-

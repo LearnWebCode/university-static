@@ -13345,10 +13345,11 @@ var _HeroSlider2 = _interopRequireDefault(_HeroSlider);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-//var googleMap = new GoogleMap();
+// Instantiate a new object using our modules/classes
 
 
-//import GoogleMap from './modules/GoogleMap';
+// Our modules / classes
+// 3rd party packages from NPM
 var mobileMenu = new _MobileMenu2.default();
 var heroSlider = new _HeroSlider2.default();
 
