@@ -1919,8 +1919,8 @@ body.login {
   border-top: none;
 }
 
-.page-links__active {
-  padding: 17px 10px;
+.page-links__active,
+  .page-links .current_page_item {
   text-align: center;
   background-color: rgb(244, 231, 180);
   color: #0D3B66;
