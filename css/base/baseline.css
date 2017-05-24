@@ -20,6 +20,7 @@ body {
   color: #333;
   font-family: 'Roboto', sans-serif;
   overflow-x: hidden;
+  position: relative;
 }
 
 img {

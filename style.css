@@ -597,6 +597,7 @@ body {
   color: #333;
   font-family: 'Roboto', sans-serif;
   overflow-x: hidden;
+  position: relative;
 }
 
 img {
@@ -1485,6 +1486,10 @@ body.login {
   -webkit-transition: all .3s;
   transition: all .3s;
   box-sizing: border-box;
+}
+
+body.admin-bar .search-overlay {
+  top: 32px;
 }
 
 .search-overlay__top {

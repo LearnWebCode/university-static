@@ -14,6 +14,10 @@
   transition: all .3s;
   box-sizing: border-box;
 
+  body.admin-bar & {
+    top: 32px;
+  }
+
   &__top {
     background-color: rgba(0, 0, 0, .09);
   }
