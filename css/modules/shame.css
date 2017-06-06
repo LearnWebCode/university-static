@@ -162,6 +162,15 @@ body.login {
 .social-color-linkedin {background-color: #0077b5}
 .social-color-instagram {background-color: #d8226b}
 
+.nav-list ul {
+  padding: 0;
+  margin: 0;
+}
+
+.nav-list li {
+  list-style: none;
+}
+
 .nav-list a {
   font-size: .9rem;
   color: #999;

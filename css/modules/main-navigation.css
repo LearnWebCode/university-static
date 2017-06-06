@@ -1,5 +1,21 @@
 .main-navigation {
   padding-top: 2px;
+
+  ul {
+    padding: 0;
+    margin: 0;
+  }
+
+  ul:before,
+  ul:after {
+    content: " ";
+    display: table;
+  }
+
+  ul:after {
+    clear: both;
+  }
+
   @mixin atMedium {
     float: left;
     margin-right: 20px;
@@ -7,6 +23,8 @@
 }
 
 .main-navigation li {
+  list-style: none;
+
   @mixin atMedium {
     float: left;
     padding-left: 20px;
