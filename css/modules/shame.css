@@ -203,3 +203,10 @@ body.login {
   .one-fifth {width: 20%}
   .one-sixth {width: 16.66%}
 }
+
+/* Make Top WP Admin Bar Fixed on Mobile */
+@media screen and (max-width: 600px) {
+  #wpadminbar {
+    position: fixed;
+  }
+}

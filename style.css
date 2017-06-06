@@ -953,6 +953,14 @@ body.login {
   }
 }
 
+/* Make Top WP Admin Bar Fixed on Mobile */
+
+@media screen and (max-width: 600px) {
+  #wpadminbar {
+    position: fixed;
+  }
+}
+
 .btn {
   display: inline-block;
   cursor: pointer;
@@ -2039,4 +2047,3 @@ margin: 20px 0;
   border-bottom: none;
   margin-bottom: 0;
 }
-
