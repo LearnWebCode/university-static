@@ -697,43 +697,14 @@ p, li {
   clear: both;
 }
 
+.hide {
+  display: none;
+}
+
 /* BEM Blocks */
-
-/* Customize Login Screen */
-
-body.login .button-primary {
-  background-color: #F95738;
-  border-color: rgb(224, 84, 56);
-  text-shadow: 0 -1px 1px rgb(212, 82, 56),1px 0 1px rgb(212, 82, 56),0 1px 1px rgb(212, 82, 56),-1px 0 1px rgb(212, 82, 56);
-  box-shadow: 0 1px 0 rgb(199, 80, 56);
-}
-
-body.login .button-primary:hover,
-body.login .button-primary:active,
-body.login .button-primary:focus {
-  background-color: rgb(232, 85, 56);
-  border-color: rgb(212, 82, 56);
-  text-shadow: 0 -1px 1px rgb(199, 80, 56),1px 0 1px rgb(199, 80, 56),0 1px 1px rgb(199, 80, 56),-1px 0 1px rgb(199, 80, 56);
-  box-shadow: 0 1px 0 rgb(186, 78, 56);
-}
-
-body.login {
-  background-color: #FAF0CA;
-}
-
-.login h1 a {
-  color: #0D3B66;
-  font-size: 30px;
-  font-weight: 300;
-  background-image: none;
-  width: auto;
-  height: auto;
-  text-indent: 0;
-}
 
 .remove-favorite {
   display: inline-block;
-  -webkit-transition: all .3s;
   transition: all .3s;
   color: #999;
   font-size: .9rem;
@@ -932,6 +903,7 @@ body.login {
 
   .one-half,
   .one-third,
+  .two-thirds,
   .one-fourth,
   .one-fifth,
   .one-sixth {
@@ -939,6 +911,10 @@ body.login {
     float: left;
     box-sizing: border-box;
     padding-right: 50px;
+  }
+
+  .two-thirds {
+    width: 66.66%;
   }
 
   .one-half {
@@ -970,6 +946,150 @@ body.login {
   }
 }
 
+/* Seach Form */
+
+.search-form {
+  background-color: #DEDEDE;
+  padding: 20px;
+  text-align: center;
+}
+
+.search-form label {
+  display: block;
+}
+
+.search-form-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.search-form .s {
+  min-width: 20px;
+  -ms-flex-preferred-size: auto;
+      flex-basis: auto;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  border: none;
+  font-family: 'Roboto', sans-serif;
+  padding: 10px;
+}
+
+@media (min-width: 530px) {
+
+  .search-form .s {
+    font-size: 1.4rem;
+  }
+}
+
+.search-submit {
+  color: #FFF;
+  border: none;
+  border-radius: 4px;
+  outline: none;
+  background-color: #0D3B66;
+  font-family: 'Roboto', sans-serif;
+  padding: 0 20px;
+  margin-left: 10px;
+}
+
+.note-limit-message {
+  visibility: hidden;
+  opacity: 0;
+  transition: all .3s ease-out;
+  color: #c32929;
+  font-weight: bold;
+}
+
+.note-limit-message.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Like Box */
+
+.generic-content .like-box {
+  float: right;
+  font-size: 1rem;
+  background-color: #EDEDED;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, .25);
+  color: red;
+  padding: 10px 10px 10px 25px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 0 0 30px 30px;
+  position: relative;
+}
+
+.generic-content .like-box:hover {
+  background-color: #DEDEDE;
+}
+
+.like-count {
+  padding-left: 10px;
+}
+
+.like-box .fa-heart-o {
+  transition: all .35s ease-out;
+  position: absolute;
+  left: 10px;
+}
+
+.like-box .fa-heart {
+  left: 10px;
+  transition: all .4s ease-out;
+  position: absolute;
+  visibility: hidden;
+  -webkit-transform: scale(.2);
+          transform: scale(.2);
+  opacity: 0;
+}
+
+.like-box[data-exists="yes"] .fa-heart {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  visibility: visible;
+  opacity: 1;
+}
+
+.like-box[data-exists="yes"] .fa-heart-o {
+  visibility: hidden;
+  opacity: 0;
+}
+
+/* Customize Login Screen */
+
+body.login .button-primary {
+  background-color: #F95738;
+  border-color: rgb(224, 84, 56);
+  text-shadow: 0 -1px 1px rgb(212, 82, 56),1px 0 1px rgb(212, 82, 56),0 1px 1px rgb(212, 82, 56),-1px 0 1px rgb(212, 82, 56);
+  box-shadow: 0 1px 0 rgb(199, 80, 56);
+}
+
+body.login .button-primary:hover,
+body.login .button-primary:active,
+body.login .button-primary:focus {
+  background-color: rgb(232, 85, 56);
+  border-color: rgb(212, 82, 56);
+  text-shadow: 0 -1px 1px rgb(199, 80, 56),1px 0 1px rgb(199, 80, 56),0 1px 1px rgb(199, 80, 56),-1px 0 1px rgb(199, 80, 56);
+  box-shadow: 0 1px 0 rgb(186, 78, 56);
+}
+
+body.login {
+  background-color: #FAF0CA;
+}
+
+.login h1 a {
+  color: #0D3B66;
+  font-size: 30px;
+  font-weight: 300;
+  background-image: none;
+  width: auto;
+  height: auto;
+  text-indent: 0;
+}
+
 .btn {
   display: inline-block;
   cursor: pointer;
@@ -979,6 +1099,8 @@ body.login {
   color: #FFF;
   font-size: 1.19rem;
   padding: 12px 24px;
+  border: none;
+  outline: none;
 }
 
 .btn--small {
@@ -997,7 +1119,6 @@ body.login {
 }
 
 .btn--orange:hover {
-  background: -webkit-linear-gradient(#EE964B, rgb(235, 109, 0));
   background: linear-gradient(#EE964B, rgb(235, 109, 0));
 }
 
@@ -1006,7 +1127,6 @@ body.login {
 }
 
 .btn--dark-orange:hover {
-  background: -webkit-linear-gradient(#F95738, rgb(204, 34, 0));
   background: linear-gradient(#F95738, rgb(204, 34, 0));
 }
 
@@ -1015,7 +1135,6 @@ body.login {
 }
 
 .btn--blue:hover {
-  background: -webkit-linear-gradient(rgb(13, 80, 143), #0D3B66);
   background: linear-gradient(rgb(13, 80, 143), #0D3B66);
 }
 
@@ -1025,7 +1144,6 @@ body.login {
 }
 
 .btn--yellow:hover {
-  background: -webkit-linear-gradient(#F4D35E, rgb(240, 188, 0));
   background: linear-gradient(#F4D35E, rgb(240, 188, 0));
 }
 
@@ -1070,6 +1188,154 @@ body.login {
   color: #333;
 }
 
+/* My Notes */
+
+.edit-note,
+.delete-note,
+.submit-note {
+  font-size: .9rem;
+  background-color: #EEE;
+  padding: 8px 16px;
+  display: inline-block;
+  margin-right: 7px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.submit-note {
+  color: #FFF;
+  border: none;
+  background-color: #F95738;
+  line-height: 1.65;
+}
+
+.submit-note:hover {
+  background-color: rgb(235, 77, 45);
+}
+
+@media (min-width: 635px) {
+
+  .edit-note, .delete-note {
+    position: relative;
+    top: -12px;
+  }
+}
+
+.edit-note:hover, .delete-note:hover {
+  background-color: #DDD;
+}
+
+.delete-note {
+  color: red;
+}
+
+.update-note {
+  visibility: hidden;
+}
+
+.update-note--visible {
+  visibility: visible;
+}
+
+.note-title-field {
+  width: 40%;
+  font-size: 1.85rem;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 300;
+  color: #0D3B66;
+  border: 1px solid transparent;
+  padding: 7px;
+  outline: none;
+  position: relative;
+  top: 1px;
+}
+
+@media (max-width: 400px) {
+
+  .note-title-field {
+    width: 100%;
+  }
+}
+
+@media (min-width: 635px) {
+
+  .note-title-field {
+    width: 65%;
+    font-size: 3.125rem;
+  }
+}
+
+.note-body-field {
+  color: #333;
+  font-family: 'Roboto', sans-serif;
+  resize: none;
+  display: block;
+  width: 100%;
+  line-height: 1.65;
+  font-size: 1.15rem;
+  padding: 7px;
+  border: 1px solid transparent;
+  height: 175px;
+  outline: none;
+}
+
+.note-active-field {
+  border: 1px solid #DDD;
+  -webkit-animation: pulseBorder .75s alternate infinite;
+          animation: pulseBorder .75s alternate infinite;
+}
+
+@-webkit-keyframes pulseBorder {
+  0% {
+    border: 1px solid #FFF;
+  }
+
+  100% {
+    border: 1px solid #CCC;
+  }
+}
+
+@keyframes pulseBorder {
+  0% {
+    border: 1px solid #FFF;
+  }
+
+  100% {
+    border: 1px solid #CCC;
+  }
+}
+
+/* Create Note */
+
+.create-note {
+  background-color: #DDD;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.new-note-title {
+  width: 100%;
+  padding: 10px;
+  font-family: 'Roboto', sans-serif;
+  border: none;
+  margin-bottom: 10px;
+  font-size: 1.15rem;
+  box-sizing: border-box;
+}
+
+.new-note-body {
+  width: 100%;
+  box-sizing: border-box;
+  resize: none;
+  padding: 10px;
+  font-family: 'Roboto', sans-serif;
+  border: none;
+  margin-bottom: 10px;
+  height: 170px;
+  font-size: 1.15rem;
+  line-height: 1.65;
+}
+
 .site-header {
   z-index: 3;
   position: absolute;
@@ -1102,7 +1368,6 @@ body.login {
   opacity: 0;
   -webkit-transform: translateY(-20%);
           transform: translateY(-20%);
-  -webkit-transition: opacity .3s ease-out, visibility .3s ease-out, -webkit-transform .3s ease-out;
   transition: opacity .3s ease-out, visibility .3s ease-out, -webkit-transform .3s ease-out;
   transition: opacity .3s ease-out, visibility .3s ease-out, transform .3s ease-out;
   transition: opacity .3s ease-out, visibility .3s ease-out, transform .3s ease-out, -webkit-transform .3s ease-out;
@@ -1210,7 +1475,6 @@ body.login {
 
 .site-footer {
   padding: 2rem 0 3.5rem 0;
-  background-image: -webkit-linear-gradient(#FFF, #ECECEC);
   background-image: linear-gradient(#FFF, #ECECEC);
 }
 
@@ -1496,7 +1760,6 @@ body.login {
   margin: 0 4px;
   padding: 0;
   outline: none;
-  -webkit-transition: background-color .3s ease-out;
   transition: background-color .3s ease-out;
   cursor: pointer;
 }
@@ -1506,7 +1769,7 @@ body.login {
 }
 
 .search-overlay {
-  overflow-y: scroll;
+  overflow-y: auto;
   overflow-x: hidden;
   z-index: 110;
   position: fixed;
@@ -1517,11 +1780,25 @@ body.login {
   background-color: rgba(255, 255, 255, .96);
   visibility: hidden;
   opacity: 0;
-  -webkit-transform: scale(1.5);
-          transform: scale(1.5);
-  -webkit-transition: all .3s;
-  transition: all .3s;
+  -webkit-transform: scale(1.09);
+          transform: scale(1.09);
+  transition: opacity .3s, visibility .3s, -webkit-transform .3s;
+  transition: opacity .3s, transform .3s, visibility .3s;
+  transition: opacity .3s, transform .3s, visibility .3s, -webkit-transform .3s;
   box-sizing: border-box;
+}
+
+.search-overlay p {
+  padding-top: 15px;
+}
+
+.search-overlay .event-summary p {
+  padding-top: 0;
+}
+
+.search-overlay .event-summary {
+  margin-bottom: 0;
+  margin-top: 20px;
 }
 
 body.admin-bar .search-overlay {
@@ -1529,7 +1806,7 @@ body.admin-bar .search-overlay {
 }
 
 .search-overlay__top {
-  background-color: rgba(0, 0, 0, .09);
+  background-color: rgba(0, 0, 0, .12);
 }
 
 .search-overlay__icon {
@@ -1553,7 +1830,7 @@ body.admin-bar .search-overlay {
 }
 
 .search-overlay__section-title {
-  margin: 30px 0 15px 0;
+  margin: 30px 0 1px 0;
   font-weight: 400;
   color: #0D3B66;
   font-size: 2rem;
@@ -1567,10 +1844,9 @@ body.admin-bar .search-overlay {
   right: 16px;
   font-size: 2.1rem;
   cursor: pointer;
-  -webkit-transition: all .3s;
   transition: all .3s;
-  color: #F95738;
   background-color: #FFF;
+  color: #F95738;
   line-height: .7;
 }
 
@@ -1609,6 +1885,7 @@ body.admin-bar .search-overlay {
   font-weight: 300;
   outline: none;
   color: #F95738;
+
 }
 
 @media (min-width: 530px) {
@@ -1635,6 +1912,10 @@ body.admin-bar .search-overlay {
   padding: 0;
 }
 
+.search-overlay .professor-cards {
+  padding-top: 21px;
+}
+
 .professor-card {
   position: relative;
   display: inline-block;
@@ -1644,9 +1925,12 @@ body.admin-bar .search-overlay {
   overflow: hidden;
 }
 
+.search-overlay .professor-card {
+  width: 180px;
+}
+
 .professor-card__image {
   display: block;
-  -webkit-transition: opacity .3s ease-out, -webkit-transform .3s ease-out;
   transition: opacity .3s ease-out, -webkit-transform .3s ease-out;
   transition: opacity .3s ease-out, transform .3s ease-out;
   transition: opacity .3s ease-out, transform .3s ease-out, -webkit-transform .3s ease-out;
@@ -1895,7 +2179,6 @@ body.admin-bar .search-overlay {
   background-color: #0D3B66;
   width: 80px;
   line-height: 1;
-  -webkit-transition: opacity .33s;
   transition: opacity .33s;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, .22);
 }
@@ -1974,7 +2257,6 @@ body.admin-bar .search-overlay {
   padding: 17px 10px;
   text-decoration: none;
   color: #0D3B66;
-  -webkit-transition: all .3s;
   transition: all .3s;
 }
 
@@ -2000,6 +2282,10 @@ margin: 20px 0;
   padding: 1rem 0;
   font-size: 1.5rem;
   border-bottom: 1px dotted #DEDEDE;
+}
+
+.search-overlay .link-list li {
+  font-size: 1.3rem;
 }
 
 .link-list li:last-child {
