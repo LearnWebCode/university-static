@@ -1,34 +1,3 @@
-/* Customize Login Screen */
-body.login .button-primary {
-  background-color: $darkOrange;
-  border-color: color($darkOrange b(+10%));
-  text-shadow: 0 -1px 1px color($darkOrange b(+15%)),1px 0 1px color($darkOrange b(+15%)),0 1px 1px color($darkOrange b(+15%)),-1px 0 1px color($darkOrange b(+15%));
-  box-shadow: 0 1px 0 color($darkOrange b(+20%));
-}
-
-body.login .button-primary:hover,
-body.login .button-primary:active,
-body.login .button-primary:focus {
-  background-color: color($darkOrange b(+7%));
-  border-color: color($darkOrange b(+15%));
-  text-shadow: 0 -1px 1px color($darkOrange b(+20%)),1px 0 1px color($darkOrange b(+20%)),0 1px 1px color($darkOrange b(+20%)),-1px 0 1px color($darkOrange b(+20%));
-  box-shadow: 0 1px 0 color($darkOrange b(+25%));
-}
-
-body.login {
-  background-color: $beige;
-}
-
-.login h1 a {
-  color: $mainBlue;
-  font-size: 30px;
-  font-weight: 300;
-  background-image: none;
-  width: auto;
-  height: auto;
-  text-indent: 0;
-}
-
 .remove-favorite {
   display: inline-block;
   transition: all .3s;
@@ -197,6 +166,7 @@ body.login {
 
   .one-half,
   .one-third,
+  .two-thirds,
   .one-fourth,
   .one-fifth,
   .one-sixth {
@@ -206,6 +176,7 @@ body.login {
     padding-right: 50px;
   }
 
+  .two-thirds {width: 66.66%;}
   .one-half {width: 50%}
   .one-third {width: 33.33%}
   .one-quarter {width: 25%}
@@ -218,4 +189,103 @@ body.login {
   #wpadminbar {
     position: fixed;
   }
+}
+
+/* Seach Form */
+.search-form {
+  background-color: #DEDEDE;
+  padding: 20px;
+  text-align: center;
+}
+
+.search-form label {
+  display: block;
+}
+
+.search-form-row {
+  display: flex;
+}
+
+.search-form .s {
+  min-width: 20px;
+  flex-basis: auto;
+  flex-grow: 1;
+  border: none;
+  font-family: 'Roboto', sans-serif;
+  padding: 10px;
+  @mixin atSmall {
+    font-size: 1.4rem;
+  }
+}
+
+.search-submit {
+  color: #FFF;
+  border: none;
+  border-radius: 4px;
+  outline: none;
+  background-color: $mainBlue;
+  font-family: 'Roboto', sans-serif;
+  padding: 0 20px;
+  margin-left: 10px;
+}
+
+.note-limit-message {
+  visibility: hidden;
+  opacity: 0;
+  transition: all .3s ease-out;
+  color: #c32929;
+  font-weight: bold;
+}
+
+.note-limit-message.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Like Box */
+.generic-content .like-box {
+  float: right;
+  font-size: 1rem;
+  background-color: #EDEDED;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, .25);
+  color: red;
+  padding: 10px 10px 10px 25px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 0 0 30px 30px;
+  position: relative;
+}
+
+.generic-content .like-box:hover {
+  background-color: #DEDEDE;
+}
+
+.like-count {
+  padding-left: 10px;
+}
+
+.like-box .fa-heart-o {
+  transition: all .35s ease-out;
+  position: absolute;
+  left: 10px;
+}
+
+.like-box .fa-heart {
+  left: 10px;
+  transition: all .4s ease-out;
+  position: absolute;
+  visibility: hidden;
+  transform: scale(.2);
+  opacity: 0;
+}
+
+.like-box[data-exists="yes"] .fa-heart {
+  transform: scale(1);
+  visibility: visible;
+  opacity: 1;
+}
+
+.like-box[data-exists="yes"] .fa-heart-o {
+  visibility: hidden;
+  opacity: 0;
 }

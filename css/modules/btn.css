@@ -7,6 +7,8 @@
   color: #FFF;
   font-size: 1.19rem;
   padding: 12px 24px;
+  border: none;
+  outline: none;
 
   &--small {
     font-size: .88rem;

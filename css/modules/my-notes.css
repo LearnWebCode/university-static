@@ -1,0 +1,127 @@
+/* My Notes */
+.edit-note,
+.delete-note,
+.submit-note {
+  font-size: .9rem;
+  background-color: #EEE;
+  padding: 8px 16px;
+  display: inline-block;
+  margin-right: 7px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.submit-note {
+  color: #FFF;
+  border: none;
+  background-color: $darkOrange;
+  line-height: 1.65;
+}
+
+.submit-note:hover {
+  background-color: color($darkOrange b(+10%) s(+10%));
+}
+
+.edit-note, .delete-note {
+  @media (min-width: 635px) {
+    position: relative;
+    top: -12px;
+  }
+}
+
+.edit-note:hover, .delete-note:hover {
+  background-color: #DDD;
+}
+
+.delete-note {
+  color: red;
+}
+
+.update-note {
+  visibility: hidden;
+}
+
+.update-note--visible {
+  visibility: visible;
+}
+
+.note-title-field {
+  width: 40%;
+  font-size: 1.85rem;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 300;
+  color: $mainBlue;
+  border: 1px solid transparent;
+  padding: 7px;
+  outline: none;
+  position: relative;
+  top: 1px;
+
+  @media (max-width: 400px) {
+    width: 100%;
+  }
+
+  @media (min-width: 635px) {
+    width: 65%;
+    font-size: 3.125rem;
+  }
+}
+
+.note-body-field {
+  color: #333;
+  font-family: 'Roboto', sans-serif;
+  resize: none;
+  display: block;
+  width: 100%;
+  line-height: 1.65;
+  font-size: 1.15rem;
+  padding: 7px;
+  border: 1px solid transparent;
+  height: 175px;
+  outline: none;
+}
+
+.note-active-field {
+  border: 1px solid #DDD;
+  animation: pulseBorder .75s alternate infinite;
+}
+
+@keyframes pulseBorder {
+  0% {
+    border: 1px solid #FFF;
+  }
+
+  100% {
+    border: 1px solid #CCC;
+  }
+}
+
+/* Create Note */
+.create-note {
+  background-color: #DDD;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.new-note-title {
+  width: 100%;
+  padding: 10px;
+  font-family: 'Roboto', sans-serif;
+  border: none;
+  margin-bottom: 10px;
+  font-size: 1.15rem;
+  box-sizing: border-box;
+}
+
+.new-note-body {
+  width: 100%;
+  box-sizing: border-box;
+  resize: none;
+  padding: 10px;
+  font-family: 'Roboto', sans-serif;
+  border: none;
+  margin-bottom: 10px;
+  height: 170px;
+  font-size: 1.15rem;
+  line-height: 1.65;
+}

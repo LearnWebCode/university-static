@@ -60,3 +60,7 @@
 .group:after {
   clear: both;
 }
+
+.hide {
+  display: none;
+}

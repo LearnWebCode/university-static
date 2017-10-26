@@ -9,7 +9,9 @@
 
 /* BEM Blocks */
 @import "modules/shame";
+@import "modules/login";
 @import "modules/btn";
+@import "modules/my-notes";
 @import "modules/site-header";
 @import "modules/site-footer";
 @import "modules/main-navigation";
@@ -26,4 +28,3 @@
 @import "modules/link-list";
 @import "modules/metabox";
 @import "modules/post-item";
-
