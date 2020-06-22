@@ -1,5 +1,4 @@
-// 3rd party packages from NPM
-import $ from 'jquery';
+import "../css/style.css"
 
 // Our modules / classes
 import MobileMenu from './modules/MobileMenu';
