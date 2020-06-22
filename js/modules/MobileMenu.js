@@ -1,20 +1,19 @@
-import $ from 'jquery';
-
 class MobileMenu {
   constructor() {
-    this.menu = $(".site-header__menu");
-    this.openButton = $(".site-header__menu-trigger");
-    this.events();
+    this.menu = document.querySelector(".site-header__menu")
+    this.openButton = document.querySelector(".site-header__menu-trigger")
+    this.events()
   }
 
   events() {
-    this.openButton.on("click", this.openMenu.bind(this));
+    this.openButton.addEventListener("click", () => this.openMenu())
   }
 
   openMenu() {
-    this.openButton.toggleClass("fa-bars fa-window-close");
-    this.menu.toggleClass("site-header__menu--active");
+    this.openButton.classList.toggle("fa-bars")
+    this.openButton.classList.toggle("fa-window-close")
+    this.menu.classList.toggle("site-header__menu--active")
   }
 }
 
-export default MobileMenu;
+export default MobileMenu

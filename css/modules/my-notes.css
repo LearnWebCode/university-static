@@ -125,3 +125,31 @@
   font-size: 1.15rem;
   line-height: 1.65;
 }
+
+/* Reveal and Hide Fade Transitions */
+#my-notes {
+  position: relative;
+}
+
+#my-notes li {
+  transition: all 0.4s ease-out;
+  opacity: 1;
+}
+
+#my-notes li.fade-out {
+  height: 0px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  opacity: 0.5;
+}
+
+#my-notes li.fade-in-calc {
+  padding: 0 !important;
+  margin: 0 !important;
+  border: none !important;
+  position: absolute;
+  left: 0;
+  right: 0;
+  opacity: 0;
+}
