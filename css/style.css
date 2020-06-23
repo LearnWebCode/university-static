@@ -1,6 +1,6 @@
 /* 3rd party packages */
 @import "normalize.css";
-@import "slick-carousel/slick/slick.css";
+@import "../node_modules/@glidejs/glide/dist/css/glide.core.min.css";
 
 /* SASS and Global'ish Stuff */
 @import "base/variables";
