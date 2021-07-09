@@ -4,7 +4,7 @@
   padding: 10px 15px;
   display: inline-block;
   margin-bottom: 30px;
-  box-shadow: 2px 2px 1px rgba(0, 0, 0, .07);
+  box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.07);
 
   &--position-up {
     position: absolute;
@@ -22,12 +22,12 @@
 
   p {
     margin: 0;
-    font-size: .9rem;
-    color: color($beige l(-45%) s(-33%));
+    font-size: 0.9rem;
+    color: adjust-color($beige, $lightness: -45%, $saturation: -33%);
   }
 
   a {
-    color: color($beige l(-45%) s(-33%));
+    color: adjust-color($beige, $lightness: -45%, $saturation: -33%);
     text-decoration: none;
     font-weight: bold;
   }
@@ -38,7 +38,7 @@
 
   & &__blog-home-link {
     background-color: $mainBlue;
-    color: #FFF;
+    color: #fff;
     display: inline-block;
     padding: 10px 15px;
     border-radius: 3px 0 0 3px;
@@ -47,7 +47,6 @@
 
   & &__blog-home-link:hover {
     text-decoration: none;
-    background-color: color($mainBlue l(-5%));
+    background-color: adjust-color($mainBlue, $lightness: -5%);
   }
-
 }

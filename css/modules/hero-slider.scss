@@ -9,7 +9,7 @@
     padding-top: 60px;
     padding-bottom: 60px;
 
-    @mixin atMedium {
+    @include atMedium {
       padding-top: 130px;
       padding-bottom: 130px;
     }
@@ -22,14 +22,13 @@
 
   &__overlay {
     margin: 0 auto;
-    background-color: rgba(0, 0, 0, .68);
+    background-color: rgba(0, 0, 0, 0.68);
     padding: 40px;
-    color: #FFF;
-    @mixin atMedium {
+    color: #fff;
+    @include atMedium {
       width: 50%;
     }
   }
-
 }
 
 .slick-dots {
@@ -41,13 +40,12 @@
   margin: 0;
   text-align: center;
   top: 15px;
-  @mixin atMedium {
+  @include atMedium {
     top: 50px;
   }
 }
 
 .slick-dots {
-
   li {
     list-style: none;
     display: inline;
@@ -60,21 +58,20 @@
     line-height: 0;
     width: 10px;
     height: 10px;
-    background-color: rgba(255, 255, 255, .5);
-    box-shadow: 1px 1px 1px rgba(0, 0, 0, .25);
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
     border-radius: 50%;
     border: none;
     margin: 0 4px;
     padding: 0;
     outline: none;
-    transition: background-color .3s ease-out;
+    transition: background-color 0.3s ease-out;
     cursor: pointer;
   }
 
   .slick-active button {
-    background-color: #FFF;
+    background-color: #fff;
   }
-
 }
 
 /* GlideJS */
@@ -87,7 +84,7 @@
   margin: 0;
   text-align: center;
   top: 15px;
-  @mixin atMedium {
+  @include atMedium {
     top: 50px;
   }
 

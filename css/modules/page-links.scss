@@ -3,7 +3,7 @@
   z-index: 1;
   background-color: $beige;
   margin: 0 0 40px 0;
-  @mixin atSmallMedium {
+  @include atSmallMedium {
     margin: 0 0 40px 20px;
     width: 300px;
     float: right;
@@ -15,18 +15,17 @@
     text-align: center;
     padding: 20px 0;
     background-color: $mainBlue;
-    color: #FFF;
+    color: #fff;
 
-      a {
-        color: #FFF;
-        text-decoration: none;
-        background-color: $mainBlue;
-      }
-
+    a {
+      color: #fff;
+      text-decoration: none;
+      background-color: $mainBlue;
+    }
   }
 
   li {
-    border-top: 1px solid color($beige l(-14%));
+    border-top: 1px solid adjust-color($beige, $lightness: -14%);
   }
 
   li:first-child {
@@ -36,7 +35,7 @@
   &__active,
   & .current_page_item {
     text-align: center;
-    background-color: color($beige blackness(+11%) s(+50%));
+    background-color: scale-color($beige, $lightness: -7%, $saturation: -10%);
     color: $mainBlue;
     font-weight: bold;
   }
@@ -47,11 +46,11 @@
     padding: 17px 10px;
     text-decoration: none;
     color: $mainBlue;
-    transition: all .3s;
+    transition: all 0.3s;
   }
 
   li a:hover {
-    color: color($mainBlue b(+6%));
-    background-color: color($beige blackness(+18%) s(+65%));
+    color: adjust-color($mainBlue, $lightness: -6%);
+    background-color: scale-color($beige, $lightness: -9%, $saturation: -12%);
   }
 }

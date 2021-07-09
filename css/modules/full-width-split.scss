@@ -1,17 +1,17 @@
 .full-width-split {
-  @mixin atMedium {
+  @include atMedium {
     display: flex;
   }
 
   &__one {
     flex: 1;
     padding: 1.6rem 16px;
-    @mixin atMedium {
+    @include atMedium {
       padding: 40px;
     }
 
     .full-width-split__inner {
-      @mixin atMedium {
+      @include atMedium {
         float: right;
       }
     }
@@ -21,13 +21,12 @@
     flex: 1;
     background-color: $beige;
     padding: 1.6rem 16px;
-    @mixin atMedium {
+    @include atMedium {
       padding: 40px;
     }
   }
 
   &__inner {
-    
     @media (min-width: 1350px) {
       width: 610px;
     }

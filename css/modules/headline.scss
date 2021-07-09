@@ -1,11 +1,11 @@
 .headline {
   margin: 0;
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
   font-weight: 300;
 
   &--large {
     font-size: 3.6rem;
-    @mixin atSmall {
+    @include atSmall {
       font-size: 6.25rem;
     }
   }
@@ -17,14 +17,14 @@
 
   &--medium {
     font-size: 1.9rem;
-    margin-bottom: .75rem;
-    @mixin atSmall {
+    margin-bottom: 0.75rem;
+    @include atSmall {
       font-size: 3.125rem;
     }
   }
 
   &--small-plus {
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 1.6875rem;
     font-weight: 400;
     margin-bottom: 1.9rem;
@@ -33,7 +33,7 @@
   &--small {
     font-size: 1.2rem;
     margin-bottom: 1.9rem;
-    @mixin atSmall {
+    @include atSmall {
       font-size: 1.6875rem;
     }
   }
@@ -43,9 +43,9 @@
   }
 
   &--tiny {
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 1.3875rem;
-    margin-bottom: .25rem;
+    margin-bottom: 0.25rem;
   }
 
   &--post-title a {
@@ -56,5 +56,4 @@
   &--post-title a:hover {
     text-decoration: underline;
   }
-
 }

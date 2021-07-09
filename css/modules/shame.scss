@@ -1,27 +1,27 @@
 .remove-favorite {
   display: inline-block;
-  transition: all .3s;
+  transition: all 0.3s;
   color: #999;
-  font-size: .9rem;
+  font-size: 0.9rem;
   cursor: pointer;
   padding: 4px 6px;
   border-radius: 3px;
 }
 
 .remove-favorite:hover {
-  background-color: #DEDEDE;
+  background-color: #dedede;
 }
 
 .page-section {
   padding-top: 1.6rem;
   padding-bottom: 1.6rem;
-  @mixin atSmall {
+  @include atSmall {
     padding-top: 3.5rem;
     padding-bottom: 3.5rem;
   }
 
   &--white {
-    background-color: #FFF;
+    background-color: #fff;
   }
 
   &--beige {
@@ -46,7 +46,7 @@
 }
 
 .school-logo-text a {
-  color: #FFF;
+  color: #fff;
   text-decoration: none;
 }
 
@@ -62,11 +62,11 @@
 @keyframes spin {
   0% {
     -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    transform: rotate(0deg);
   }
   100% {
     -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 
@@ -78,30 +78,40 @@
   border: 0.25rem solid rgba(0, 0, 0, 0.2);
   border-top-color: black;
   -webkit-animation: spin 1s infinite linear;
-          animation: spin 1s infinite linear;
+  animation: spin 1s infinite linear;
 }
 
-.c-orange {color: $darkOrange}
-.c-blue {color: $mainBlue}
-.c-white {color: #FFF}
-.c-dark {color: #333}
-.gray {color: #999999}
+.c-orange {
+  color: $darkOrange;
+}
+.c-blue {
+  color: $mainBlue;
+}
+.c-white {
+  color: #fff;
+}
+.c-dark {
+  color: #333;
+}
+.gray {
+  color: #999999;
+}
 
 .search-trigger {
   display: none;
-  color: #FFF;
+  color: #fff;
   position: relative;
   cursor: pointer;
   top: 1px;
   margin-left: 20px;
-  @mixin atMedium {
+  @include atMedium {
     display: inline-block;
     top: 6px;
   }
 }
 
 .search-trigger:hover {
-  opacity: .65;
+  opacity: 0.65;
 }
 
 .social-icons-list {
@@ -117,19 +127,29 @@
 .social-icons-list li a {
   display: block;
   text-align: center;
-  color: #FFF;
+  color: #fff;
   font-size: 1.25rem;
 }
 
 .social-icons-list li a:hover {
-  opacity: .75;
+  opacity: 0.75;
 }
 
-.social-color-facebook {background-color: #4862a3}
-.social-color-twitter {background-color: #55acee}
-.social-color-youtube {background-color: #cc1e1f}
-.social-color-linkedin {background-color: #0077b5}
-.social-color-instagram {background-color: #d8226b}
+.social-color-facebook {
+  background-color: #4862a3;
+}
+.social-color-twitter {
+  background-color: #55acee;
+}
+.social-color-youtube {
+  background-color: #cc1e1f;
+}
+.social-color-linkedin {
+  background-color: #0077b5;
+}
+.social-color-instagram {
+  background-color: #d8226b;
+}
 
 .nav-list ul {
   padding: 0;
@@ -141,7 +161,7 @@
 }
 
 .nav-list a {
-  font-size: .9rem;
+  font-size: 0.9rem;
   color: #999;
   text-decoration: none;
 }
@@ -159,7 +179,7 @@
   padding-bottom: 1.6rem;
 }
 
-@mixin atMedium {
+@include atMedium {
   .row {
     margin-right: -50px;
   }
@@ -176,12 +196,24 @@
     padding-right: 50px;
   }
 
-  .two-thirds {width: 66.66%;}
-  .one-half {width: 50%}
-  .one-third {width: 33.33%}
-  .one-quarter {width: 25%}
-  .one-fifth {width: 20%}
-  .one-sixth {width: 16.66%}
+  .two-thirds {
+    width: 66.66%;
+  }
+  .one-half {
+    width: 50%;
+  }
+  .one-third {
+    width: 33.33%;
+  }
+  .one-quarter {
+    width: 25%;
+  }
+  .one-fifth {
+    width: 20%;
+  }
+  .one-sixth {
+    width: 16.66%;
+  }
 }
 
 /* Make Top WP Admin Bar Fixed on Mobile */
@@ -193,7 +225,7 @@
 
 /* Seach Form */
 .search-form {
-  background-color: #DEDEDE;
+  background-color: #dedede;
   padding: 20px;
   text-align: center;
 }
@@ -211,20 +243,20 @@
   flex-basis: auto;
   flex-grow: 1;
   border: none;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   padding: 10px;
-  @mixin atSmall {
+  @include atSmall {
     font-size: 1.4rem;
   }
 }
 
 .search-submit {
-  color: #FFF;
+  color: #fff;
   border: none;
   border-radius: 4px;
   outline: none;
   background-color: $mainBlue;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   padding: 0 20px;
   margin-left: 10px;
 }
@@ -232,7 +264,7 @@
 .note-limit-message {
   visibility: hidden;
   opacity: 0;
-  transition: all .3s ease-out;
+  transition: all 0.3s ease-out;
   color: #c32929;
   font-weight: bold;
 }
@@ -246,8 +278,8 @@
 .generic-content .like-box {
   float: right;
   font-size: 1rem;
-  background-color: #EDEDED;
-  box-shadow: 1px 1px 1px rgba(0, 0, 0, .25);
+  background-color: #ededed;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
   color: red;
   padding: 10px 10px 10px 25px;
   border-radius: 4px;
@@ -257,7 +289,7 @@
 }
 
 .generic-content .like-box:hover {
-  background-color: #DEDEDE;
+  background-color: #dedede;
 }
 
 .like-count {
@@ -265,17 +297,17 @@
 }
 
 .like-box .fa-heart-o {
-  transition: all .35s ease-out;
+  transition: all 0.35s ease-out;
   position: absolute;
   left: 10px;
 }
 
 .like-box .fa-heart {
   left: 10px;
-  transition: all .4s ease-out;
+  transition: all 0.4s ease-out;
   position: absolute;
   visibility: hidden;
-  transform: scale(.2);
+  transform: scale(0.2);
   opacity: 0;
 }
 

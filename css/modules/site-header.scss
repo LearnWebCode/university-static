@@ -21,14 +21,14 @@
   &__menu {
     visibility: hidden;
     position: absolute;
-    background-color: color($mainBlue a(89%) b(+3%));
+    background-color: adjust-color($mainBlue, $alpha: -0.11, $lightness: -1%);
     left: 0;
     right: 0;
     top: -20px;
     padding-top: 58px;
     opacity: 0;
     transform: translateY(-20%);
-    transition: opacity .3s ease-out, visibility .3s ease-out, transform .3s ease-out;
+    transition: opacity 0.3s ease-out, visibility 0.3s ease-out, transform 0.3s ease-out;
     padding-bottom: 20px;
 
     &--active {
@@ -37,7 +37,7 @@
       visibility: visible;
     }
 
-    @mixin atMedium {
+    @include atMedium {
       visibility: visible;
       opacity: 1;
       transform: translateY(0) scale(1);
@@ -52,24 +52,24 @@
 
   &__search-trigger {
     cursor: pointer;
-    color: #FFF;
+    color: #fff;
     font-size: 1.2rem;
     position: absolute;
     top: 6px;
     right: 16px;
 
-    @mixin atSmall {
+    @include atSmall {
       top: 4px;
       font-size: 1.4rem;
     }
 
-    @mixin atMedium {
+    @include atMedium {
       display: none;
     }
   }
 
   &__menu-trigger {
-    color: #FFF;
+    color: #fff;
     cursor: pointer;
     font-size: 1.2rem;
     position: absolute;
@@ -77,12 +77,12 @@
     top: 7px;
     right: 46px;
 
-    @mixin atSmall {
+    @include atSmall {
       top: 5px;
       font-size: 1.4rem;
     }
 
-    @mixin atMedium {
+    @include atMedium {
       display: none;
     }
   }
@@ -90,7 +90,7 @@
   &__util {
     padding: 0 0 0 20px;
 
-    @mixin atMedium {
+    @include atMedium {
       padding: 0;
       float: right;
     }
@@ -98,7 +98,7 @@
 
   &__btn {
     margin-right: 20px;
-    @mixin atMedium {
+    @include atMedium {
       float: left;
     }
   }
