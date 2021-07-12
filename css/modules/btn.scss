@@ -4,14 +4,14 @@
   border-radius: 4px;
   overflow: hidden;
   text-decoration: none;
-  color: #FFF;
+  color: #fff;
   font-size: 1.19rem;
   padding: 12px 24px;
   border: none;
   outline: none;
 
   &--small {
-    font-size: .88rem;
+    font-size: 0.88rem;
     padding: 7px 13px;
     font-weight: 300;
   }
@@ -26,7 +26,7 @@
   }
 
   &--orange:hover {
-    background: linear-gradient($lightOrange, color($lightOrange b(+30%) s(+80%)));
+    background: linear-gradient($lightOrange, scale-color($lightOrange, $lightness: -25%, $saturation: 100%));
   }
 
   &--dark-orange {
@@ -34,7 +34,7 @@
   }
 
   &--dark-orange:hover {
-    background: linear-gradient($darkOrange, color($darkOrange b(+40%) s(+80%)));
+    background: linear-gradient($darkOrange, scale-color($darkOrange, $lightness: -35%, $saturation: 100%));
   }
 
   &--blue {
@@ -42,16 +42,16 @@
   }
 
   &--blue:hover {
-    background: linear-gradient(color($mainBlue b(-16%)), $mainBlue);
+    background: linear-gradient(scale-color($mainBlue, $lightness: 11%), $mainBlue);
   }
 
   &--yellow {
     background-color: $mainYellow;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, .22);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.22);
   }
 
   &--yellow:hover {
-    background: linear-gradient($mainYellow, color($mainYellow b(+40%) s(+80%)));
+    background: linear-gradient($mainYellow, scale-color($mainYellow, $lightness: -29%, $saturation: 100%));
   }
 
   &--beige {
@@ -68,19 +68,19 @@
   }
 
   &--white {
-    background-color: #FFF;
+    background-color: #fff;
     color: #173f58;
   }
 
   &--white:hover {
-    background-color: #DDD;
+    background-color: #ddd;
   }
 
   &--large {
     font-size: 1.3rem;
     padding: 16px 34px;
     border-radius: 7px;
-    @mixin atSmall {
+    @include atSmall {
       font-size: 1.9rem;
     }
   }

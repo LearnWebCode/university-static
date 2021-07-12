@@ -1,14 +1,14 @@
 .site-footer {
   padding: 2rem 0 3.5rem 0;
-  background-image: linear-gradient(#FFF, #ECECEC);
+  background-image: linear-gradient(#fff, #ececec);
 
   p {
-    font-size: .9rem;
+    font-size: 0.9rem;
   }
 
   .headline {
     color: #666;
-    margin-bottom: .33rem;
+    margin-bottom: 0.33rem;
   }
 
   &__link {
@@ -22,13 +22,13 @@
   }
 
   &__inner {
-    border-top: 1px dotted #DEDEDE;
+    border-top: 1px dotted #dedede;
     padding-top: 3.5rem;
   }
 
   &__col-one {
     text-align: center;
-    @mixin atMedium {
+    @include atMedium {
       text-align: left;
       width: 33%;
       float: left;
@@ -39,7 +39,7 @@
     text-align: center;
     width: 85%;
     margin: 0 auto;
-    @mixin atMedium {
+    @include atMedium {
       text-align: left;
       float: left;
       width: 42%;
@@ -61,7 +61,7 @@
     margin: 0 auto;
     clear: both;
     text-align: center;
-    @mixin atMedium {
+    @include atMedium {
       padding-top: 0;
       margin: 0;
       clear: none;

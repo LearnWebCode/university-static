@@ -16,7 +16,7 @@
     clear: both;
   }
 
-  @mixin atMedium {
+  @include atMedium {
     float: left;
     margin-right: 20px;
   }
@@ -25,7 +25,7 @@
 .main-navigation li {
   list-style: none;
 
-  @mixin atMedium {
+  @include atMedium {
     float: left;
     padding-left: 20px;
   }
@@ -34,10 +34,10 @@
 .main-navigation a {
   display: block;
   padding: 10px 20px;
-  color: #FFF;
+  color: #fff;
   text-decoration: none;
   font-weight: 300;
-  @mixin atMedium {
+  @include atMedium {
     display: inline-block;
     padding: 0;
   }

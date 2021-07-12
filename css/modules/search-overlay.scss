@@ -7,11 +7,11 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(255, 255, 255, .96);
+  background-color: rgba(255, 255, 255, 0.96);
   visibility: hidden;
   opacity: 0;
   transform: scale(1.09);
-  transition: opacity .3s, transform .3s, visibility .3s;
+  transition: opacity 0.3s, transform 0.3s, visibility 0.3s;
   box-sizing: border-box;
 
   p {
@@ -32,14 +32,14 @@
   }
 
   &__top {
-    background-color: rgba(0, 0, 0, .12);
+    background-color: rgba(0, 0, 0, 0.12);
   }
 
   &__icon {
     margin-right: 10px;
     font-size: 1.8rem;
     color: $darkOrange;
-    @mixin atMedium {
+    @include atMedium {
       font-size: 2.5rem;
     }
   }
@@ -56,7 +56,7 @@
     color: $mainBlue;
     font-size: 2rem;
     padding: 15px 0;
-    border-bottom: 1px solid #CCC;
+    border-bottom: 1px solid #ccc;
   }
 
   &__close {
@@ -65,15 +65,15 @@
     right: 16px;
     font-size: 2.1rem;
     cursor: pointer;
-    transition: all .3s;
-    background-color: #FFF;
+    transition: all 0.3s;
+    background-color: #fff;
     color: $darkOrange;
-    line-height: .7;
-    @mixin atSmall {
+    line-height: 0.7;
+    @include atSmall {
       top: 18px;
       font-size: 2.1rem;
     }
-    @mixin atMedium {
+    @include atMedium {
       top: 26px;
       font-size: 2.8rem;
     }
@@ -99,14 +99,13 @@
   font-weight: 300;
   outline: none;
   color: $darkOrange;
-  @mixin atSmall {
-    font-size: 1.5rem
+  @include atSmall {
+    font-size: 1.5rem;
   }
-  @mixin atMedium {
+  @include atMedium {
     width: 80%;
     font-size: 3rem;
   }
-
 }
 
 .body-no-scroll {
